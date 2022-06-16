@@ -1,0 +1,19 @@
+{
+    "Name":"Charizard",
+    "description":"Crypto Art",
+    "image":"https://ipfs.io/ipfs/QmT7BTX9KurTacAHsngK5dBDJwsPH95E5G1c32ELqQPwuS",
+    "attributes":[{
+        "trait_type":"Power",
+        "value":100
+    },
+    {
+        "trait_type":"Attack",
+        "value":"Fire"
+    },
+    {
+        "trait_type":"Type_Of_Attack",
+        "value":"Air"
+    }
+
+    ]
+}

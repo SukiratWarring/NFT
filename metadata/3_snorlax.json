@@ -1,0 +1,19 @@
+{
+    "Name":"Snorlax",
+    "description":"Pokemon",
+    "image":"https://ipfs.io/ipfs/QmXiPyK7o8jsrnxdRuavhCYqxuLVw9mzgw9iddgbnrHGCj",
+    "attributes":[{
+        "trait_type":"Power",
+        "value":90
+    },
+    {
+        "trait_type":"Attack",
+        "value":"Body"
+    },
+    {
+        "trait_type":"Type_Of_Attack",
+        "value":"Land"
+    }
+
+    ]
+}

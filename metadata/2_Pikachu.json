@@ -1,0 +1,19 @@
+{
+    "Name":"Pikachu",
+    "description":"Pokemon",
+    "image":"https://ipfs.io/ipfs/QmbirBnDzU8ZCdGXsMJhk34F8Y8PozhyFNcBw3pTo9wqHL",
+    "attributes":[{
+        "trait_type":"Power",
+        "value":60
+    },
+    {
+        "trait_type":"Attack",
+        "value":"Thunder"
+    },
+    {
+        "trait_type":"Type_Of_Attack",
+        "value":"Land"
+    }
+
+    ]
+}
