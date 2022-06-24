@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 require('@openzeppelin/hardhat-upgrades');
 require("dotenv").config()
+const secret=require('./src/secret.json')
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
@@ -21,10 +22,13 @@ module.exports = {
   solidity: "0.8.15",
   networks:{
   mumbai:{
-    url:process.env.url,
-    accounts:[process.env.key],
+    url:secret.url,
+    accounts:[secret.key],
     gas:2100000,
     gasPrice:8000000000
   }
+},
+etherscan: {
+  apiKey: secret.apikey,
 }
 };

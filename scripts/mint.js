@@ -6,9 +6,7 @@ async function main() {
   const provider = new ethers.providers.InfuraProvider("maticmum", process.env.project_id)
   const wallet = new ethers.Wallet(process.env.key, provider)
   const signer = wallet.connect(provider)
-  console.log(signer)
   const pokemon_to_contract = new ethers.Contract(process.env.contract_address, abi, signer)
-  console.log(pokemon_to_contract)
   await pokemon_to_contract.mint("https://ipfs.io/ipfs/QmXiPyK7o8jsrnxdRuavhCYqxuLVw9mzgw9iddgbnrHGCj")
   console.log('NFT minted!')
 }
