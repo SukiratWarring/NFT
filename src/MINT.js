@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Flex, Input, VStack } from '@chakra-ui/react'
+import { Button, Container, Flex, Heading, VStack } from '@chakra-ui/react'
 import { ethers } from 'ethers'
 import { useMoralis } from "react-moralis";
 import { useNavigate } from 'react-router';
@@ -60,9 +60,11 @@ export default function MINT() {
   return (
     <Flex minHeight='100vh' width='full' align='center' justifyContent='center' backgroundColor={"#008080"}>
       <VStack  spacing='14' >
+      <Heading>Roll the dice 🎲 to mint 👷 a Random Pokemon  Nft !</Heading>
+
         <Button onClick={rollfunc} size={"lg"}  >Roll 🎲</Button>
         <Button onClick={mintcall} size={"lg"}>Mint 👷‍♂️</Button>
-        <Button onClick={() => Logthemout()} size={"lg"}>Logout ◀️</Button>
+        <Button onClick={() => Logthemout()} size={"lg"}>Logout 🛑</Button>
       </VStack>
     </Flex>
     )
