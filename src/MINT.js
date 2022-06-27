@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Container, Flex, Heading, VStack } from '@chakra-ui/react'
+import { Button, Flex, Heading, VStack } from '@chakra-ui/react'
 import { ethers } from 'ethers'
 import { useMoralis } from "react-moralis";
 import { useNavigate } from 'react-router';
@@ -8,7 +8,7 @@ const secret = require('./secret.json');
 
 export default function MINT() {
   //Moralis 
-  const { authenticate, isAuthenticated, isAuthenticating, logout, authError } = useMoralis();
+  const { logout} = useMoralis();
   const abi = pokemonnftjson.abi
   const provider = new ethers.providers.InfuraProvider("maticmum", secret.project_id)
   const wallet = new ethers.Wallet(secret.key, provider)
