@@ -44,7 +44,7 @@ function App() {
     )
 
   }
-  const { authenticate, isAuthenticated, isAuthenticating, logout, authError } = useMoralis();
+  const { authenticate, isAuthenticated, isAuthenticating, authError } = useMoralis();
 
   let navigate1 = useNavigate();
 

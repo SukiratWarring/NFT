@@ -4,17 +4,18 @@ import { ethers } from 'ethers'
 import { useMoralis } from "react-moralis";
 import { useNavigate } from 'react-router';
 const pokemonnftjson = require("./MYNFT.json")
-const secret = require('./secret.json');
 
 export default function MINT() {
   //Moralis 
   const { logout} = useMoralis();
   const abi = pokemonnftjson.abi
-  const provider = new ethers.providers.InfuraProvider("maticmum", secret.project_id)
-  const wallet = new ethers.Wallet(secret.key, provider)
+  console.log(process.env.REACT_APP_key)
+  const provider = new ethers.providers.InfuraProvider("maticmum", process.env.REACT_APP_project_id)
+  console.log(provider)
+  const wallet = new ethers.Wallet(process.env.REACT_APP_key, provider)
   const signer = wallet.connect(provider)
   console.log(signer)
-  const to_MYNFT = new ethers.Contract(secret.contract_address, abi, signer)
+  const to_MYNFT = new ethers.Contract(process.env.REACT_APP_contract_address, abi, signer)
   console.log(to_MYNFT)
 
   const rollfunc = async () => {

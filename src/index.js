@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { ChakraProvider,extendTheme } from '@chakra-ui/react';
+import { ChakraProvider } from '@chakra-ui/react';
 import MINT from './MINT';
 import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { MoralisProvider } from "react-moralis";
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
-
+import PrivateRoutes from './PrivateRoutes';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const serverUrl = "https://ngip98jujd94.usemoralis.com:2053/server";
@@ -19,8 +19,10 @@ root.render(
       <MoralisProvider appId={appId} serverUrl={serverUrl}>
         <Router>
           <Routes>
-            <Route path="/" element={<App />} />
+            <Route element={<PrivateRoutes/>}>
             <Route path="/Mint" element={<MINT />} />
+            </Route>
+            <Route path="/" element={<App />} />
           </Routes>
         </Router>
       </MoralisProvider>
